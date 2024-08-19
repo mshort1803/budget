@@ -1,0 +1,4 @@
+struct Category {
+    description: String,
+    budget_item: Vec<BudgetItem>
+}

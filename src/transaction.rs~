@@ -1,0 +1,5 @@
+struct Transaction {
+    description: String,
+    transaction_type: TransactionType,
+    amount: f64,
+}

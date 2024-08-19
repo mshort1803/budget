@@ -1,0 +1,22 @@
+fn main() {
+    println!("Hello, world!");
+}
+
+struct Budget {
+    categories: Vec<Category>,
+    transactions: Vec<Transaction>,
+    current_balance: f64,
+    currently_budgetted: f64,
+}
+
+struct Category {
+    description: String,
+    budget_item: Vec<BudgetItem>
+}
+
+struct Transaction {
+    description: String,
+    amount: f64,
+}
+
+struct BudgetItem {}
