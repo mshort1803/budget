@@ -1,12 +1,13 @@
 use super::category::Category;
 use super::transaction::Transaction;
+use super::currency::Currency;
 
 #[derive(Debug)]
 pub struct Budget {
-    categories: Vec<Category>,
-    transactions: Vec<Transaction>,
-    current_balance: f64,
-    currently_budgetted: f64,
+    pub categories: Vec<Category>,
+    pub transactions: Vec<Transaction>,
+    current_balance: Currency,
+    currently_budgetted: Currency,
 }
 
 impl Budget {
@@ -14,8 +15,8 @@ impl Budget {
 	Self {
 	    categories: Vec::<Category>::new(),
 	    transactions: Vec::<Transaction>::new(),
-	    current_balance: starting_balance,
-	    currently_budgetted: 0.0,
+	    current_balance: Currency::from_dollars(starting_balance),
+	    currently_budgetted: Currency::from_dollars(0.00),
 	}
     }
 
